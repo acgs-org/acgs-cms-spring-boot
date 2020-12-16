@@ -1,0 +1,7 @@
+# 主配置文件
+spring:
+  # 激活环境配置
+  profiles:
+    active: dev
+  # 文件编码
+  mandatory-file-encoding: UTF-8
