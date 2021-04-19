@@ -10,6 +10,7 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
+import java.util.Optional;
 
 /**
  * @Author John@acgs-org
@@ -32,8 +33,11 @@ public class UserController {
 
     @PostMapping("/login")
     public void login(@RequestBody @Validated LoginDTO validator) {
-        if (userService.getUserByUserName(validator).isPresent()) {
-            // 登陆成功
+        Optional<User> user = userService.getUserByUserName(validator);
+        if (user.isPresent()) {
+            System.out.println(user);
+        } else {
+            System.out.println("user not exist");
         }
     }
 
@@ -56,4 +60,6 @@ public class UserController {
 //        return userService.findAllUser();
         return userRepository.findAll();
     }
+
+//    public
 }

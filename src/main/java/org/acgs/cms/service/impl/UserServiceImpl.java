@@ -36,6 +36,7 @@ public class UserServiceImpl implements UserService {
 
     @Override
     public Optional<User> getUserByUserName(LoginDTO dto) {
+//        userRepository.findOne();
         User user = new User();
         BeanUtil.copyProperties(dto, user);
         if (!userRepository.exists(Example.of(user))) {
