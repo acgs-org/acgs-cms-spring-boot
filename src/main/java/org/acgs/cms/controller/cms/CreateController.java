@@ -1,4 +1,4 @@
-package org.acgs.cms.controller;
+package org.acgs.cms.controller.cms;
 
 import org.acgs.autoconfigure.annotation.AcgsBuild;
 import org.acgs.autoconfigure.controller.BuilderController;

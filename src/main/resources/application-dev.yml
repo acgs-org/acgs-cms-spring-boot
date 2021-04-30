@@ -13,5 +13,3 @@ spring:
 acgs:
   build:
     basePath: org.acgs.cms.moudle
-    driver: mongo
-    buildAll: true
