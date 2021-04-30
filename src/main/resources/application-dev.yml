@@ -2,3 +2,16 @@
 server:
   # 服务端口
   port: 5000
+# mongodb 数据库连接配置
+spring:
+  data:
+    mongodb:
+      database: acgs
+      host: 127.0.0.1
+      port: 27017
+# acgs 自动构建配置
+acgs:
+  build:
+    basePath: org.acgs.cms.moudle
+    driver: mongo
+    buildAll: true

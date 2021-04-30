@@ -1,0 +1,19 @@
+{
+  "properties": [
+    {
+      "name": "acgs.build.path",
+      "type": "java.lang.String",
+      "description": "Description for acgs.build.path."
+    },
+    {
+      "name": "acgs.build.driver",
+      "type": "java.lang.String",
+      "description": "Description for acgs.build.driver."
+    },
+    {
+      "name": "acgs.build.all",
+      "type": "java.lang.String",
+      "description": "Description for acgs.build.all."
+    }
+  ]
+}
