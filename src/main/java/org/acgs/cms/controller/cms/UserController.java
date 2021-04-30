@@ -36,10 +36,12 @@ public class UserController {
     public User register(@RequestBody @Validated RegisterDTO validator) {
         boolean exist = userRepository.existsByUsername(validator.getUsername());
         if (exist) {
+            System.out.println("用户已存在");
             return null;
         }
         User user = new User();
         BeanUtil.copyProperties(validator, user);
+        System.out.println("注册成功！");
         return userRepository.insert(user);
     }
 
@@ -48,11 +50,13 @@ public class UserController {
      */
     @PostMapping("/login")
     public Tokens login(@RequestBody @Validated LoginDTO validator) {
-        User user = userRepository.findByUsername(validator.getName());
+        User user = userRepository.findByUsernameAndPassword(validator.getUsername(), validator.getPassword());
         if (user == null) {
+            System.out.println("用户不存在");
             return null;
         }
-        return jwt.generateTokens(user.getUsername());
+        System.out.println("登录成功！");
+        return jwt.generateTokens(user.getId().toString());
     }
 
 }

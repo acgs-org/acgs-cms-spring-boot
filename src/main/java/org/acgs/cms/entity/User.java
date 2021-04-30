@@ -1,6 +1,7 @@
 package org.acgs.cms.entity;
 
 import lombok.Data;
+import org.bson.types.ObjectId;
 
 /**
  * @author John@acgs-org
@@ -10,6 +11,8 @@ import lombok.Data;
 public class User {
 
     private static final long serialVersionUID = -1463999384554707735L;
+
+    private ObjectId id;
 
     /**
      * 用户名

@@ -12,7 +12,7 @@ import javax.validation.constraints.NotBlank;
 public class LoginDTO {
 
     @NotBlank(message = "{username.not-blank}")
-    private String name;
+    private String username;
 
     @NotBlank(message = "{password.new.not-blank}")
     private String password;
